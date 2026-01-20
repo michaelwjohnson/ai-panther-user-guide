@@ -1,0 +1,27 @@
+# AI-Panther Guide .gitignore
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Personal notes (if you want to keep them private)
+personal_notes/
+scratch/
+
+# Any test scripts with credentials
+*_credentials.sh
+*.env
+.env.local
