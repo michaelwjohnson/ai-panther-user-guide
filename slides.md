@@ -1,3 +1,8 @@
+---
+layout: default
+title: Slides
+---
+
 # AI-Panther HPC User Guide – Slide Outline
 
 ## Slide 1 – Title

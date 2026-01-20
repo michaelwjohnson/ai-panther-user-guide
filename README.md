@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 # AI-Panther HPC User Guide
 
 A comprehensive guide for using AI-Panther, Florida Tech's High-Performance Computing (HPC) cluster.
