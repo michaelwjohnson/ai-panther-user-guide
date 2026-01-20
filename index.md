@@ -9,8 +9,8 @@ Welcome to the comprehensive guide for using AI-Panther, Florida Tech's High-Per
 
 ## 🚀 Quick Start
 
-- **New to HPC?** Start with the [full user guide](README.md)
-- **Need a quick overview?** Check out our [presentation slides](slides.md)
+- **New to HPC?** Start with the [complete user guide](README.md)
+- **Need help with specific tasks?** Use the floating table of contents for quick navigation
 
 ## 🎯 What's AI-Panther?
 
@@ -21,10 +21,9 @@ AI-Panther is Florida Tech's GPU-accelerated supercomputing cluster featuring:
 - **SLURM job scheduler** for resource management
 - **Jupyter notebook support** with GPU access
 
-## 📖 Navigation
+## 📜 Navigation
 
-- [**Complete User Guide**](README.md) - Detailed instructions for everything
-- [**Presentation Slides**](slides.md) - Quick overview and key points
+- [**Complete User Guide**](README.md) - Detailed instructions with floating TOC for easy navigation
 
 ## 🎓 Perfect For
 

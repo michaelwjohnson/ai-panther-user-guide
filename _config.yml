@@ -1,23 +1,26 @@
 title: "AI Panther User Guide"
 description: "Comprehensive guide for using AI Panther - Florida Tech's Supercomputing Cluster"
-theme: minima
+baseurl: "/ai-panther-user-guide"
+url: "https://michaelwjohnson.github.io"
+author: "Michael Johnson"
+github_username: "michaelwjohnson"
 
-# Navigation
-navigation:
-  - name: Home
-    link: /
-  - name: Slides
-    link: /slides
+theme: minima
 
 # Markdown settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude files
 exclude:
   - start_jupyter.sh
+  - slides.md

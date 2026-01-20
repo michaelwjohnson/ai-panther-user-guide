@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: User Guide
 ---
 
 # AI-Panther HPC User Guide

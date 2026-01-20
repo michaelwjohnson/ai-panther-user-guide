@@ -1,0 +1,115 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+  <style>
+    /* Floating TOC Styles */
+    #toc-container {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: none;
+      max-width: 300px;
+    }
+
+    #toc {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    #toc h4 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    #toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #toc li {
+      margin: 0;
+      padding: 2px 0;
+    }
+
+    #toc a {
+      text-decoration: none;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.4;
+      display: block;
+      padding: 3px 0;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    #toc a:hover {
+      color: #2a7ae4;
+      background: rgba(42, 122, 228, 0.1);
+      padding-left: 5px;
+    }
+
+    /* Indentation for different heading levels */
+    .toc-h2 { padding-left: 10px; }
+    .toc-h3 { padding-left: 20px; }
+    .toc-h4 { padding-left: 30px; }
+    .toc-h5 { padding-left: 40px; }
+    .toc-h6 { padding-left: 50px; }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      #toc-container {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin: 20px 0;
+        max-width: 100%;
+        display: block !important;
+      }
+
+      #toc {
+        background: #f9f9f9;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Custom scrollbar for TOC */
+    #toc::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #toc::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 2px;
+    }
+
+    #toc::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 2px;
+    }
+
+    #toc::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+  </style>
+</head>
