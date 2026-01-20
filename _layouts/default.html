@@ -63,13 +63,16 @@
             tocList.appendChild(li);
           });
           
-          // Show/hide TOC on scroll
+          // Show/hide TOC on scroll - always floating
           let ticking = false;
           function updateTOC() {
             const scrollTop = window.pageYOffset;
-            tocContainer.style.display = scrollTop > 200 ? 'block' : 'none';
+            tocContainer.style.display = scrollTop > 300 ? 'block' : 'none';
             ticking = false;
           }
+          
+          // Initial check
+          updateTOC();
           
           window.addEventListener('scroll', function() {
             if (!ticking) {
