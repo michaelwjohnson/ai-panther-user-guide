@@ -22,5 +22,4 @@ plugins:
 
 # Exclude files
 exclude:
-  - start_jupyter.sh
   - slides.md
