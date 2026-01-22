@@ -19,6 +19,22 @@
         <div class="trigger">
           <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
           <a class="page-link" href="{{ "/README.html" | relative_url }}">User Guide</a>
+          
+          <!-- Dropdown for sections -->
+          <div class="dropdown">
+            <button class="dropbtn">Sections ▾</button>
+            <div class="dropdown-content">
+              <a href="{{ "/README.html#introduction" | relative_url }}">Introduction</a>
+              <a href="{{ "/README.html#getting-started" | relative_url }}">Getting Started</a>
+              <a href="{{ "/README.html#working-with-slurm-the-job-scheduler" | relative_url }}">SLURM</a>
+              <a href="{{ "/README.html#using-jupyter-notebooks" | relative_url }}">Jupyter Notebooks</a>
+              <a href="{{ "/README.html#python-environments" | relative_url }}">Python Environments</a>
+              <a href="{{ "/README.html#file-management" | relative_url }}">File Management</a>
+              <a href="{{ "/README.html#troubleshooting" | relative_url }}">Troubleshooting</a>
+              <a href="{{ "/README.html#best-practices" | relative_url }}">Best Practices</a>
+              <a href="{{ "/README.html#additional-resources" | relative_url }}">Additional Resources</a>
+            </div>
+          </div>
         </div>
       </nav>
     {%- endif -%}

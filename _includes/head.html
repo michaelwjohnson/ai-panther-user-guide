@@ -110,5 +110,71 @@
     #toc::-webkit-scrollbar-thumb:hover {
       background: #999;
     }
+
+    /* Dropdown Menu Styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: #111;
+      padding: 5px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.2s;
+    }
+
+    .dropbtn:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      z-index: 1000;
+      border: 1px solid #ddd;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      font-size: 13px;
+      transition: background-color 0.2s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown-content a:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .dropdown-content a:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Mobile dropdown adjustments */
+    @media (max-width: 768px) {
+      .dropdown-content {
+        right: -10px;
+        min-width: 180px;
+      }
+    }
   </style>
 </head>

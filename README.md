@@ -62,7 +62,7 @@ A comprehensive guide for using AI-Panther, Florida Tech's High-Performance Comp
 
 ---
 
-## 1. Introduction
+## 1. Introduction {#introduction}
 
 AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed for computationally intensive research and academic projects.
 
@@ -89,7 +89,7 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 
 ---
 
-## 2. Getting Started
+## 2. Getting Started {#getting-started}
 
 ### Prerequisites
 
@@ -292,7 +292,7 @@ Since many people use AI-Panther, there's a "scheduler" called SLURM that:
 
 ---
 
-## 3. Working with SLURM (The Job Scheduler)
+## 3. Working with SLURM (The Job Scheduler) {#working-with-slurm-the-job-scheduler}
 
 ### What is SLURM?
 
@@ -433,7 +433,7 @@ tail -f logs/job_<job_id>.out      # Watch output
 
 ---
 
-## 4. Using Jupyter Notebooks
+## 4. Using Jupyter Notebooks {#using-jupyter-notebooks}
 
 ### Automated Launch Script
 
@@ -551,7 +551,7 @@ Fri Nov 14 11:35:29 2025
 
 ---
 
-## 5. Python Environments
+## 5. Python Environments {#python-environments}
 
 ### Virtual Environments
 
@@ -607,7 +607,7 @@ conda install numpy pandas pytorch torchvision pytorch-cuda=11.8 -c pytorch -c n
 
 ---
 
-## 6. File Management
+## 6. File Management {#file-management}
 
 ### Storage Locations
 
@@ -660,7 +660,7 @@ rsync -avz --progress /local/path/ your_username@ai-panther.fit.edu:~/remote/pat
 
 ---
 
-## 7. Troubleshooting
+## 7. Troubleshooting {#troubleshooting}
 
 ### Common Issues
 
@@ -762,7 +762,7 @@ htop
 
 ---
 
-## 8. Best Practices
+## 8. Best Practices {#best-practices}
 
 ### Resource Management
 
@@ -829,7 +829,7 @@ htop
 
 ---
 
-## 9. Additional Resources
+## 9. Additional Resources {#additional-resources}
 
 ### Official Documentation
 

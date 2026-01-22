@@ -40,6 +40,9 @@
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
         const tocContainer = document.getElementById('toc-container');
         
+        // Start with TOC hidden
+        tocContainer.style.display = 'none';
+        
         if (headings.length > 2) { // Show TOC only if there are more than 2 headings
           headings.forEach(function(heading, index) {
             // Skip the main title (first h1)
@@ -63,7 +66,7 @@
             tocList.appendChild(li);
           });
           
-          // Show/hide TOC on scroll - always floating
+          // Show/hide TOC on scroll - only when scrolling
           let ticking = false;
           function updateTOC() {
             const scrollTop = window.pageYOffset;
@@ -71,17 +74,12 @@
             ticking = false;
           }
           
-          // Initial check
-          updateTOC();
-          
           window.addEventListener('scroll', function() {
             if (!ticking) {
               requestAnimationFrame(updateTOC);
               ticking = true;
             }
           });
-        } else {
-          tocContainer.style.display = 'none';
         }
       });
     </script>
