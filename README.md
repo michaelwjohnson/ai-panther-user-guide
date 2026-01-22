@@ -38,7 +38,7 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 ### Prerequisites
 
 1. **TRACKS Account** - Your Florida Tech username and password
-2. **VPN Access** - Required when off-campus ([Setup instructions](https://fit.edu/vpn))
+2. **VPN Access** - Required when off-campus (Contact IT for assistance)
 3. **SSH Client** - VS Code with Remote-SSH extension (recommended) or terminal
 
 ### Connecting to AI-Panther
@@ -743,3 +743,4 @@ This guide is provided as-is for educational purposes.
 **Last Updated**: November 2024
 **Maintainer**: Michael Johnson
 **Version**: 1.0
+
