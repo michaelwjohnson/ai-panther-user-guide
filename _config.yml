@@ -5,6 +5,9 @@ url: "https://michaelwjohnson.github.io"
 author: "Michael Johnson"
 github_username: "michaelwjohnson"
 
+# Make README the default page
+readme_index: true
+
 theme: minima
 
 # Markdown settings
