@@ -17,7 +17,6 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 - 32 NVIDIA A100 GPUs (40GB each) for deep learning and GPU computing
 - 16 CPU nodes for general computation
 - SLURM job scheduler for resource management
-- Jupyter notebook support with GPU access
 
 **Who Should Use This Guide:**
 
@@ -29,9 +28,8 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 
 1. Connecting to AI-Panther via VS Code or SSH
 2. Submitting and managing SLURM jobs
-3. Running Jupyter notebooks on GPU nodes
-4. Managing files and Python environments
-5. Best practices and troubleshooting
+3. Managing files and Python environments
+4. Best practices and troubleshooting
 
 ---
 
@@ -64,7 +62,6 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 **Benefits:**
 
 - Integrated file editing and terminal
-- Native Jupyter notebook support
 - Extensions work on remote files
 - No manual file transfers
 
@@ -379,125 +376,9 @@ tail -f logs/job_<job_id>.out      # Watch output
 
 ---
 
-## 4. Using Jupyter Notebooks {#using-jupyter-notebooks}
 
-### Automated Launch Script
 
-Use [`start_jupyter.sh`](start_jupyter.sh) to automatically find available GPU nodes and launch Jupyter:
-
-```bash
-# Download script
-wget https://raw.githubusercontent.com/your-repo/ai-panther-guide/main/start_jupyter.sh
-chmod +x start_jupyter.sh
-
-# (Optional) Edit VENV_PATH to point to your environment
-nano start_jupyter.sh
-
-# Run
-./start_jupyter.sh
-```
-
-The script automatically:
-
-- Finds available GPU node
-- Allocates resources (1 GPU, 32GB RAM, 4 CPUs, 8 hours)
-- Activates Python environment
-- Starts Jupyter server
-- Displays connection instructions
-
-### Manual Jupyter Setup
-
-**1. Request GPU node:**
-
-```bash
-srun -p gpu1 --gres=gpu:1 --mem=32G --cpus-per-task=4 --time=4:00:00 --pty bash
-```
-
-**2. Activate environment and start Jupyter:**
-
-```bash
-source /path/to/your/.venv/bin/activate
-jupyter-notebook --no-browser --ip=0.0.0.0 --port 8888
-```
-
-**3. Copy the connection URL:**
-
-When Jupyter starts, it will display output like:
-
-```
-Or copy and paste one of these URLs:
-    http://gpu03:8888/tree?token=abc123def456...
-```
-
-Copy the full URL (including the token) from your output.
-
-### Accessing Jupyter
-
-#### Option A: VS Code Remote-SSH (Recommended)
-
-1. Connect to AI-Panther via VS Code Remote-SSH
-2. Start Jupyter on GPU node (see above)
-3. Open any `.ipynb` file
-4. Select Kernel → Existing Jupyter Server
-5. Paste the full connection URL: `http://gpu03:8888/tree?token=abc123def456...`
-
-### Jupyter Best Practices
-
-**Verify GPU access:**
-
-```python
-import torch
-print(torch.cuda.is_available())
-!nvidia-smi
-```
-
-Expected output:
-
-```
-True
-Fri Nov 14 11:35:29 2025       
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 575.51.03              Driver Version: 575.51.03      CUDA Version: 12.9     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    2 |
-| N/A   29C    P0             56W /  400W |       4MiB /  40960MiB |      0%      Default |
-|                                         |                        |             Disabled |
-+-----------------------------------------+------------------------+----------------------+
-|   1  NVIDIA A100-SXM4-40GB          On  |   00000000:41:00.0 Off |                    0 |
-| N/A   31C    P0             61W /  400W |       0MiB /  40960MiB |      0%      Default |
-|                                         |                        |             Disabled |
-+-----------------------------------------+------------------------+----------------------+
-|   2  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
-| N/A   27C    P0             55W /  400W |       0MiB /  40960MiB |      0%      Default |
-|                                         |                        |             Disabled |
-+-----------------------------------------+------------------------+----------------------+
-|   3  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
-| N/A   27C    P0             58W /  400W |       0MiB /  40960MiB |      0%      Default |
-|                                         |                        |             Disabled |
-+-----------------------------------------+------------------------+----------------------+
-                                                                                         
-+-----------------------------------------------------------------------------------------+
-| Processes:                                                                              |
-|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
-|        ID   ID                                                               Usage      |
-|=========================================================================================|
-|  No running processes found                                                             |
-+-----------------------------------------------------------------------------------------+
-```
-
-**Resource management:**
-
-- Request appropriate resources (don't overallocate)
-- Set realistic time limits
-- Cancel jobs when finished: `scancel <job_id>`
-
----
-
-## 5. Python Environments {#python-environments}
+## 4. Python Environments {#python-environments}
 
 ### Virtual Environments
 
@@ -553,7 +434,7 @@ conda install numpy pandas pytorch torchvision pytorch-cuda=11.8 -c pytorch -c n
 
 ---
 
-## 6. File Management {#file-management}
+## 5. File Management {#file-management}
 
 ### Storage Locations
 
@@ -606,7 +487,7 @@ rsync -avz --progress /local/path/ your_username@ai-panther.fit.edu:~/remote/pat
 
 ---
 
-## 7. Troubleshooting {#troubleshooting}
+## 6. Troubleshooting {#troubleshooting}
 
 ### Common Issues
 
@@ -708,7 +589,7 @@ htop
 
 ---
 
-## 8. Best Practices {#best-practices}
+## 7. Best Practices {#best-practices}
 
 ### Resource Management
 
@@ -775,7 +656,7 @@ htop
 
 ---
 
-## 9. Additional Resources {#additional-resources}
+## 8. Additional Resources {#additional-resources}
 
 ### Official Documentation
 
@@ -860,5 +741,5 @@ This guide is provided as-is for educational purposes.
 ---
 
 **Last Updated**: November 2024
-**Maintainer**: Michael2024
+**Maintainer**: Michael Johnson
 **Version**: 1.0

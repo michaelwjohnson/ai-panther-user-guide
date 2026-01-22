@@ -16,7 +16,6 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 - 32 NVIDIA A100 GPUs (40GB each) for deep learning and GPU computing
 - 16 CPU nodes for general computation
 - SLURM job scheduler for resource management
-- Jupyter notebook support with GPU access
 
 **Who Should Use This Guide:**
 
@@ -28,9 +27,8 @@ AI-Panther is Florida Tech's High-Performance Computing (HPC) cluster designed f
 
 1. Connecting to AI-Panther via VS Code or SSH
 2. Submitting and managing SLURM jobs
-3. Running Jupyter notebooks on GPU nodes
-4. Managing files and Python environments
-5. Best practices and troubleshooting
+3. Managing files and Python environments
+4. Best practices and troubleshooting
 
 ---
 
