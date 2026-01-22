@@ -75,20 +75,10 @@
     .toc-h5 { padding-left: 40px; }
     .toc-h6 { padding-left: 50px; }
 
-    /* Mobile responsiveness */
+    /* Mobile responsiveness - Hide TOC on mobile */
     @media (max-width: 768px) {
       #toc-container {
-        right: 10px;
-        max-width: 250px;
-      }
-
-      #toc {
-        padding: 10px;
-        font-size: 11px;
-      }
-
-      #toc h4 {
-        font-size: 12px;
+        display: none !important;
       }
     }
 
